@@ -24,7 +24,7 @@ export class SolicitudesService {
   }
 
   async buscar(estado?: string, prioridad?: string, categoria?: string) {
-    // Al estilo Actividad 6: Usamos QueryBuilder
+    //actv6
     const qb = this.repo.createQueryBuilder('s');
     if (estado) qb.andWhere('s.estado = :estado', { estado });
     if (prioridad) qb.andWhere('s.prioridad = :prioridad', { prioridad });
@@ -48,7 +48,7 @@ export class SolicitudesService {
   }
 
   async update(id: number, dto: UpdateSolicitudDto) {
-    const prev = await this.findOne(id); // Aquí también validamos la RN10 
+    const prev = await this.findOne(id); // Aquí también validamos la RN10
 
     // Regla RN09: Una solicitud Finalizada no puede volver a Pendiente
     if (dto.estado) {

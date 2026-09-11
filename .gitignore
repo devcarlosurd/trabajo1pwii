@@ -1,0 +1,13 @@
+# Dependencias
+/node_modules
+npm-debug.log
+
+# Archivos compilados
+/dist
+
+# Entornos y Seguridad prohibido subir el env
+.env
+
+# Archivos del Sistema Operativo
+.DS_Store
+Thumbs.db
